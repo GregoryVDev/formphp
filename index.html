@@ -12,104 +12,78 @@
 
 <body>
 
-    <!--Section: Contact v.2-->
-    <section class="mb-4">
+    <section id="contact">
+        <div class="container">
+            <h2>Contactez-moi</h2>
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
 
-        <!--Section heading-->
-        <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-        <!--Section description-->
-        <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us
-            directly. Our team will come back to you within
-            a matter of hours to help you.</p>
+                    <!-- Ouverture du formulaire avec ses attributs, method, action, role (facultatif) -->
+                    <form id="contact-form" method="post" action="php/contact.php" role="form">
 
-        <div class="row">
 
-            <!--Grid column-->
-            <div class="col-md-9 mb-md-0 mb-5">
-                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                        <div class="row">
 
-                    <!--Grid row-->
-                    <div class="row">
 
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <input type="text" id="name" name="name" class="form-control">
-                                <label for="name" class="">Your name</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-
-                        <!--Grid column-->
-                        <div class="col-md-6">
-                            <div class="md-form mb-0">
-                                <input type="text" id="email" name="email" class="form-control">
-                                <label for="email" class="">Your email</label>
-                            </div>
-                        </div>
-                        <!--Grid column-->
-
-                    </div>
-                    <!--Grid row-->
-
-                    <!--Grid row-->
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="md-form mb-0">
-                                <input type="text" id="subject" name="subject" class="form-control">
-                                <label for="subject" class="">Subject</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Grid row-->
-
-                    <!--Grid row-->
-                    <div class="row">
-
-                        <!--Grid column-->
-                        <div class="col-md-12">
-
-                            <div class="md-form">
-                                <textarea type="text" id="message" name="message" rows="2"
-                                    class="form-control md-textarea"></textarea>
-                                <label for="message">Your message</label>
+                            <div class="col-lg-6">
+                                <label for="firstname">Prénom <span class="etoile">*</span></label>
+                                <input id="firstname" type="text" name="firstname" class="form-control"
+                                    placeholder="Votre prénom">
+                                <p class="comments"></p>
                             </div>
 
+
+                            <div class="col-lg-6">
+                                <label for="name">Nom <span class="etoile">*</span></label>
+                                <input id="name" type="text" name="name" class="form-control" placeholder="Votre Nom">
+                                <p class="comments"></p>
+                            </div>
+
+
+                            <div class="col-lg-6">
+                                <label for="email">Email <span class="etoile">*</span></label>
+                                <input id="email" type="text" name="email" class="form-control"
+                                    placeholder="Votre Email">
+                                <p class="comments"></p>
+                            </div>
+
+
+                            <div class="col-lg-6">
+                                <label for="phone">Téléphone</label>
+                                <input id="phone" type="tel" name="phone" class="form-control"
+                                    placeholder="Votre Téléphone">
+                                <p class="comments"></p>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <label for="message">Message <span class="etoile">*</span></label>
+                                <textarea id="message" name="message" class="form-control" placeholder="Votre Message"
+                                    rows="4"></textarea>
+                                <p class="comments"></p>
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <p class="etoile"><strong>* Ces informations sont requises.</strong></p>
+                            </div>
+
+
+                            <div class="col-lg-12 text-end">
+                                <input type="submit" class="button1 btn" value="Envoyer">
+                                <!-- ceci est ma clé recaptcha coté client-->
+                                <div class="g-recaptcha" data-sitekey="6LfNfookAAAAAKg7baUfn3khT4QOb2VZAsSqthHB">
+
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <!--Grid row-->
 
-                </form>
 
-                <div class="text-center text-md-left">
-                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                    </form>
                 </div>
-                <div class="status"></div>
             </div>
-            <!--Grid column-->
-
-            <!--Grid column-->
-            <div class="col-md-3 text-center">
-                <ul class="list-unstyled mb-0">
-                    <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                        <p>San Francisco, CA 94126, USA</p>
-                    </li>
-
-                    <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                        <p>+ 01 234 567 89</p>
-                    </li>
-
-                    <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                        <p>contact@mdbootstrap.com</p>
-                    </li>
-                </ul>
-            </div>
-            <!--Grid column-->
-
-        </div>
-
     </section>
-    <!--Section: Contact v.2-->
+
 
 
 
